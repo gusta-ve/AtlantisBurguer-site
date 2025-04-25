@@ -13,8 +13,8 @@
       <h1 class="logo-central">ATLANTIS <span>burguer</span></h1>
     </div>
   </header>
-  
- <!-- colocar com o fundo ornamental na home  -->
+
+  <!-- colocar com o fundo ornamental na home  -->
   <nav class="menu">
     <ul>
       <li><a href="index.html" class="active">Home</a></li>
@@ -24,15 +24,18 @@
   </nav>
 
   <section class="carrossel">
+    <div class="carrossel-overlay"></div>
     <div class="container">
-      <button class="seta-carrossel esquerda" onclick="moverSlide(-1)">&#10094;</button>
       <div class="carrossel-wrapper" id="carrosselWrapper">
         <img src="assets/img/home/segurando lanche.jpg" alt="Segurando lanche" class="img-central">
         <img src="assets/img/home/aniversariante lanche.jpg" alt="Aniversariante da semana">
         <img src="assets/img/home/finaldelas.jpg" alt="Final de semana delas">
         <img src="assets/img/home/lanche cheddar.jpg" alt="Lanche cheddar">
       </div>
-      <button class="seta-carrossel direita" onclick="moverSlide(1)">&#10095;</button>
+      <div class="carrossel-controles">
+        <button onclick="moverSlide(-1)">&#10094;</button>
+        <button onclick="moverSlide(1)">&#10095;</button>
+      </div>
 
       <div class="btn-central">
         <a href="https://atlantisburguer.saipos.com/home" target="_blank" rel="noopener noreferrer">
@@ -44,7 +47,7 @@
 
   <footer class="rodape">
     <div class="container">
-      <div class="info">
+      <div class="info info-central">
         <div>
           <h3>ENDEREÇO</h3>
           <p>Av. Dr. Augusto de Toledo, 1238 - Santa Paula</p>
@@ -60,17 +63,17 @@
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.129111493458!2d-46.5613437!3d-23.564311999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce423e2145c1e1%3A0x48b9f2f0a89e8b94!2sAtlantis%20Burguer!5e0!3m2!1spt-BR!2sbr!4v1680381100000"
         width="600" height="200" loading="lazy" allowfullscreen></iframe>
 
-        <div class="redes-sociais">
-          <a href="https://wa.me/551142262748" target="_blank" rel="noopener noreferrer">
-            <img src="assets/img/icons/whatsapp.svg" alt="WhatsApp" />
-          </a>
-          <a href="https://www.facebook.com/share/18c5NJrLZT/" target="_blank" rel="noopener noreferrer">
-            <img src="assets/img/icons/facebook.svg" alt="Facebook" />
-          </a>
-          <a href="https://www.instagram.com/atlantisburguer?igsh=MWJ4NW5pa2M1bHZ3dg==" target="_blank" rel="noopener noreferrer">
-            <img src="assets/img/icons/instagram.svg" alt="Instagram" />
-          </a>
-        </div>        
+      <div class="redes-sociais">
+        <a href="https://wa.me/551142262748" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <img src="assets/img/icons/whatsapp.svg" alt="WhatsApp" />
+        </a>
+        <a href="https://www.facebook.com/share/18c5NJrLZT/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <img src="assets/img/icons/facebook.svg" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com/atlantisburguer?igsh=MWJ4NW5pa2M1bHZ3dg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="assets/img/icons/instagram.svg" alt="Instagram" />
+        </a>
+      </div>        
   </footer>
 
   <script src="js/script.js"></script>

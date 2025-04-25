@@ -22,21 +22,23 @@ body {
   z-index: 2;
 }
 
-.banner {
+.banner,
+.banner.sobre-banner {
   height: 300px;
   background-image: url('../assets/img/home/lanche head.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  z-index: 1;
 }
 
-.banner::after {
+.banner::after,
+.sobre-banner::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -77,16 +79,13 @@ nav.menu ul li a {
   font-size: 1rem;
   font-weight: 500;
   transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 5px;
 }
 
 nav.menu ul li a:hover,
 nav.menu ul li a.active {
   color: #ffc300;
-}
-
-nav.menu ul li a {
-  position: relative;
-  padding-bottom: 5px;
 }
 
 nav.menu ul li a::after {
@@ -107,10 +106,28 @@ nav.menu ul li a.active::after {
 
 .carrossel {
   background: url('../assets/img/home/fundo-ornamento.jpg') center center no-repeat;
-  background-size: cover;
-  padding: 2.5rem 0;
-  text-align: center;
+  background-size: 200%;
+  background-color: #081b2c;
   position: relative;
+  padding: 2.5rem 0 1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.carrossel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 27, 44, 0.8);
+  backdrop-filter: brightness(0.9);
+  z-index: 0;
+}
+
+.carrossel-wrapper,
+.carrossel-controles,
+.btn-central {
+  position: relative;
+  z-index: 1;
 }
 
 .carrossel-wrapper {
@@ -119,8 +136,14 @@ nav.menu ul li a.active::after {
   align-items: center;
   gap: 1rem;
   flex-wrap: nowrap;
-  overflow: hidden;
-  margin-bottom: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carrossel-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .carrossel-wrapper img {
@@ -129,6 +152,7 @@ nav.menu ul li a.active::after {
   border-radius: 8px;
   transition: transform 0.3s, opacity 0.3s;
   opacity: 0.5;
+  cursor: pointer;
 }
 
 .carrossel-wrapper img.img-central {
@@ -136,39 +160,30 @@ nav.menu ul li a.active::after {
   opacity: 1;
 }
 
-.seta-carrossel {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  background: none;
+.carrossel-controles {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.carrossel-controles button {
+  background-color: #ffc300;
+  color: #081b2c;
   border: none;
-  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
   cursor: pointer;
-  z-index: 2;
-  padding: 0 10px;
+  transition: background 0.3s ease;
 }
 
-.seta-carrossel.esquerda {
-  left: 10px;
-}
-
-.seta-carrossel.direita {
-  right: 10px;
-}
-
-.tridente {
-  margin-bottom: 1rem;
-}
-
-.tridente img {
-  width: 60px;
-  margin: 0 auto;
-  display: block;
+.carrossel-controles button:hover {
+  background-color: #ffda5f;
 }
 
 .btn-central {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .btn-acao {
@@ -187,6 +202,46 @@ nav.menu ul li a.active::after {
 .btn-acao:hover {
   background: linear-gradient(135deg, #eac240, #ffdd73);
   transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.sobre-container {
+  background: rgba(8, 27, 44, 0.8) url('../assets/img/sobre/fundo-ornamental.jpg') center top no-repeat;
+  background-size: contain;
+  padding: 4rem 1rem 6rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 2rem auto;
+  border-radius: 16px;
+}
+
+.sobre-container h2 {
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sobre-container p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-top: 1.5rem;
+}
+
+.tridente {
+  width: 100px;
+  margin: 0 auto 1rem;
+}
+
+.estrelas {
+  width: 260px;
+  margin: 0.8rem auto 1.2rem;
+}
+
+.destaque-amarelo {
+  color: #ffc300;
+  font-weight: bold;
 }
 
 .rodape {
@@ -198,15 +253,16 @@ nav.menu ul li a.active::after {
   align-items: center;
 }
 
-.rodape .info {
+.rodape .info,
+.rodape .info-central {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 4rem;
   flex-wrap: wrap;
   width: 100%;
   max-width: 900px;
   margin-bottom: 1.5rem;
-  text-align: left;
+  text-align: center;
 }
 
 .rodape h3 {
@@ -254,10 +310,12 @@ iframe {
   }
 
   .carrossel-wrapper {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 
-  .rodape .info {
+  .rodape .info,
+  .rodape .info-central {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -266,52 +324,32 @@ iframe {
   .logo-central {
     font-size: 2.2rem;
   }
+
+  .sobre-container {
+    background: linear-gradient(rgba(8, 27, 44, 0.8), rgba(8, 27, 44, 0.8)),
+                url('../assets/img/sobre/fundo-ornamental.jpg') center center no-repeat;
+    background-size: cover;
+  }
+
+  .sobre-container h2 {
+    font-size: 1.4rem;
+  }
+
+  .sobre-container p {
+    font-size: 1rem;
+  }
 }
 
-.conteudo-cardapio {
-  padding: 4rem 1rem;
-  text-align: center;
-}
+@media (max-width: 480px) {
+  .tridente {
+    width: 60px;
+  }
 
-.titulo-pagina {
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #ffc300;
-  letter-spacing: 2px;
-}
+  .estrelas {
+    width: 160px;
+  }
 
-.secao-cardapio {
-  margin-bottom: 4rem;
-}
-
-.secao-cardapio h3 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #ffffff;
-  text-transform: uppercase;
-  border-bottom: 2px solid #ffc300;
-  display: inline-block;
-  padding-bottom: 0.5rem;
-}
-
-.lista-produtos {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 600px;
-}
-
-.lista-produtos li {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.lista-produtos li:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: scale(1.02);
+  .logo-central {
+    font-size: 1.7rem;
+  }
 }

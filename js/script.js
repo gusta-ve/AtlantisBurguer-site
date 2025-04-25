@@ -10,6 +10,9 @@ function atualizarSlides() {
       img.classList.add('img-central');
     }
   });
+
+  const offset = currentSlide * (imagens[0].offsetWidth + 16); // 16 = gap
+  carrosselWrapper.style.transform = `translateX(-${offset}px)`;
 }
 
 function moverSlide(direcao) {
@@ -18,7 +21,7 @@ function moverSlide(direcao) {
 }
 
 function iniciarAutoplay() {
-  intervaloCarrossel = setInterval(() => moverSlide(1), 3000);
+  intervaloCarrossel = setInterval(() => moverSlide(1), 4000);
 }
 
 function pararAutoplay() {
@@ -29,7 +32,20 @@ document.addEventListener('DOMContentLoaded', () => {
   atualizarSlides();
   iniciarAutoplay();
 
-  // pausa ao passar o mouse
   carrosselWrapper.addEventListener('mouseenter', pararAutoplay);
   carrosselWrapper.addEventListener('mouseleave', iniciarAutoplay);
+
+  let startX = 0;
+
+  carrosselWrapper.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  carrosselWrapper.addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+
+    if (diff > 50) moverSlide(1);
+    else if (diff < -50) moverSlide(-1);
+  });
 });
