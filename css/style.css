@@ -22,27 +22,23 @@ body {
   z-index: 2;
 }
 
-.banner,
-.banner.sobre-banner {
+.banner {
   height: 300px;
-  background-image: url('../assets/img/home/lanche head.jpg');
-  background-size: cover;
-  background-position: center;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  z-index: 1;
 }
 
-.banner::after,
-.sobre-banner::after {
-  content: "";
+.banner-bg {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background-image: url('../assets/img/home/lanche head.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3; /* Opacidade do fundo */
   z-index: -1;
 }
 
@@ -50,19 +46,30 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1; /* Garantir que o texto fique acima do fundo */
 }
 
 .logo-central {
-  font-size: 2.8rem;
-  font-weight: 700;
-  letter-spacing: 3px;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 20 px;
   margin-bottom: 0.5rem;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-central > span:first-child {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 20px;
 }
 
 .logo-central span {
-  color: #ffc300;
+  font-size: 1.5rem;
+  color: white;
 }
+
 
 nav.menu ul {
   display: flex;
