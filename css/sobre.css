@@ -7,25 +7,8 @@ body {
   color: #fff;
 }
 
-.voltar {
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 0.95rem;
-}
-
-.voltar a {
-  color: #ffc300;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.voltar a:hover {
-  color: #fff;
-}
-
 .sobre-banner {
-  height: 200px;
+  height: 260px;
   background-image: url('../assets/img/home/lanche head.jpg');
   background-size: cover;
   background-position: center;
@@ -33,13 +16,80 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .sobre-banner::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.logo-nav {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.logo-central {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.logo-central span {
+  color: #ffc300;
+}
+
+/* Menu */
+.menu {
+  background: transparent;
+  position: relative;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.menu ul li a:hover,
+.menu ul li a.active {
+  color: #ffc300;
+}
+
+.menu ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #ffc300;
+  transition: width 0.3s ease;
+}
+
+.menu ul li a:hover::after,
+.menu ul li a.active::after {
+  width: 100%;
 }
 
 .sobre-container {
@@ -87,15 +137,19 @@ body {
   .sobre-container {
     padding: 2rem 1rem 3rem;
   }
+
   .sobre-container h2 {
     font-size: 1.2rem;
   }
+
   .sobre-container p {
     font-size: 0.95rem;
   }
+
   .tridente {
     width: 50px;
   }
+
   .estrelas {
     width: 140px;
   }
