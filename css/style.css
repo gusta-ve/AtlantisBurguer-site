@@ -18,7 +18,7 @@ body {
   background: transparent;
   position: relative;
   text-align: center;
-  padding: 10px 0;
+  padding: 30px 0px;
   z-index: 2;
 }
 
@@ -106,10 +106,10 @@ nav.menu ul li a.active::after {
 
 .carrossel {
   background: url('../assets/img/home/fundo-ornamento.jpg') center center no-repeat;
-  background-size: 200%;
+  background-size: 100%;
   background-color: #081b2c;
   position: relative;
-  padding: 2.5rem 0 1rem;
+  padding: 0 0 1rem;
   text-align: center;
   overflow: hidden;
 }
@@ -243,7 +243,6 @@ nav.menu ul li a.active::after {
   color: #ffc300;
   font-weight: bold;
 }
-
 .rodape {
   background: #0b2438;
   padding: 3rem 1rem;
@@ -253,16 +252,25 @@ nav.menu ul li a.active::after {
   align-items: center;
 }
 
-.rodape .info,
-.rodape .info-central {
+.rodape .rodape-conteudo {
   display: flex;
-  justify-content: center;
-  gap: 4rem;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
-  max-width: 900px;
-  margin-bottom: 1.5rem;
-  text-align: center;
+  max-width: 1200px;
+  gap: 2rem;
+}
+
+.mapa {
+  flex: 1;
+}
+
+.info-endereco {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left;
 }
 
 .rodape h3 {
@@ -276,19 +284,13 @@ nav.menu ul li a.active::after {
   font-size: 0.95rem;
 }
 
-iframe {
-  border-radius: 8px;
-  width: 100%;
-  max-width: 600px;
-  border: 0;
-  margin-top: 1rem;
-}
-
 .redes-sociais {
-  margin-top: 1rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   gap: 20px;
+  width: 100%;
+  max-width: 600px;
 }
 
 .redes-sociais img {
