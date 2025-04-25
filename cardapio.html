@@ -4,7 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Atlantis Burguer - Cardápio</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cardapio.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    .banner {
+      height: 260px;
+      background-image: url('assets/img/home/lanche head.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .logo-nav {
+      position: relative;
+      z-index: 1;
+    }
+    .logo-central {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+    .logo-central span {
+      color: #ffc300;
+    }
+  </style>
 </head>
 <body>
 
@@ -24,55 +57,36 @@
 
   <section class="conteudo-cardapio">
     <div class="container">
-      <h2 class="titulo-pagina">BOAS VINDAS À CIDADE PERDIDA</h2>
-      <p>
-        Você acaba de entrar na lendária <span class="destaque-amarelo">CIDADE PERDIDA DOS DEUSES DO OLIMPO</span>, onde cada detalhe foi pensado para oferecer uma experiência digna de <span class="destaque-amarelo">SERES MITOLÓGICOS</span>.<br><br>
-        Nossos ingredientes são preparados com o frescor e o sabor dos banquetes divinos, e nossos hambúrgueres são feitos sob medida, direto da nossa parrilla, para garantir que <span class="destaque-amarelo">CADA MORDIDA SEJA UMA VERDADEIRA OBRA DOS DEUSES.</span>
-      </p>
 
-      <div class="secao-cardapio">
-        <h3>COMBO KIDS</h3>
-        <p>O combo completo para nossos Minis Deuses. Pão, carne e queijo que todos eles amam, acompanhado de fritas e bebida à escolha: água, suco ou refrigerante.</p>
-        <span class="preco">R$29,99</span>
+      <div class="intro-box">
+        <h2>BOAS VINDAS À CIDADE PERDIDA</h2>
+        <p>Você acaba de entrar na lendária <strong>CIDADE PERDIDA DOS DEUSES DO OLIMPO</strong>, onde cada detalhe foi pensado para oferecer uma experiência digna de <strong>SERES MITOLÓGICOS</strong>.</p>
+        <p>Nossos ingredientes são preparados com o frescor e o sabor dos banquetes divinos, e nossos hambúrgueres são feitos sob medida, direto da nossa parrilla, para garantir que <strong>CADA MORDIDA SEJA UMA VERDADEIRA OBRA DOS DEUSES</strong>.</p>
       </div>
 
-      <div class="secao-cardapio">
-        <h3>AFRODITE BURGUER</h3>
-        <p>A origem do hambúrguer dos deuses: pão, carne e queijo acompanhados de picanhinhas de cheddar e bacon, com nossa porção de batata kids e bebida.</p>
-        <img src="assets/img/home/lanche cheddar.jpg" alt="Afrodite Burguer" class="imagem-cardapio">
-        <span class="preco">R$50,00</span>
-      </div>
-
-      <div class="tabela-cardapio">
-        <div class="coluna">
-          <h4>BURGUER DO DIA</h4>
-          <p><strong>Segunda-feira</strong> | R$26,99<br>Atlantis 150g, queijo prato, cebola caramelizada, pão brioche</p>
-          <p><strong>Terça-feira</strong> | R$34,99<br>Cheddar Melt, pão australiano, carne 180g</p>
-          <p><strong>Quarta-feira</strong> | R$29,99<br>Atlantis Salada, queijo branco, alface americana e tomate</p>
-          <p><strong>Quinta-feira</strong> | R$34,99<br>Bacon Duplo, pão australiano e molho da casa</p>
+      <div class="box-lanche">
+        <div class="descricao-lanche">
+          <h3><span class="tag">COMBO KIDS</span></h3>
+          <p>O combo completo para nossos Minis Deuses. O pão carne e queijo que todos eles amam, acompanhando fritas e uma bebida à escolha: água, suco ou refrigerante.</p>
         </div>
-
-        <div class="coluna">
-          <h4>ENTRADAS</h4>
-          <p><strong>Batata Frita</strong> R$19,99<br><small>+ Cheddar e Bacon R$24,99</small></p>
-          <p><strong>Olimpo</strong> R$39,99<br>Pão de alho, iscas de frango, fritas e cheddar</p>
-          <p><strong>Afrodite</strong> R$35,99<br>Fritas, crispy de bacon, cheddar e picles</p>
-          <p><strong>Bolinho de Costela</strong> R$24,00<br>Porção com 5 unidades</p>
-        </div>
-
-        <div class="coluna">
-          <h4>EXTRA</h4>
-          <p>Hambúrguer 150g R$10,00</p>
-          <p>Molho Extra R$3,00</p>
-          <p>Porção de Cheddar R$5,00</p>
-          <p>Cheddar Bacon R$7,00</p>
-          <p>Maionese da Casa R$4,00</p>
-          <p>Pão sem Gergelim R$2,00</p>
+        <div class="preco-lanche">
+          <span>R$29,99</span>
         </div>
       </div>
+
+      <div class="box-lanche">
+        <div class="descricao-lanche">
+          <h3><span class="tag">AFRODITE BURGUER</span></h3>
+          <p>A origem do hambúrguer dos deuses: pão, carne e queijo acompanhando as picanhinhas de cheddar e bacon, com nossa porção de batata kids e bebida.</p>
+        </div>
+        <div class="preco-lanche">
+          <img src="assets/img/home/lanche cheddar.jpg" alt="Afrodite Burguer">
+          <span>R$50,00</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <script src="js/script.js"></script>
 </body>
 </html>
