@@ -6,38 +6,6 @@
   <title>Atlantis Burguer - Cardápio</title>
   <link rel="stylesheet" href="css/cardapio.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    .banner {
-      height: 260px;
-      background-image: url('assets/img/home/lanche head.jpg');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-    .banner::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-    .logo-nav {
-      position: relative;
-      z-index: 1;
-    }
-    .logo-central {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #fff;
-      letter-spacing: 2px;
-      text-align: center;
-    }
-    .logo-central span {
-      color: #ffc300;
-    }
-  </style>
 </head>
 <body>
 
@@ -46,14 +14,14 @@
       <h1 class="logo-central">ATLANTIS <span>burguer</span></h1>
     </div>
   </header>
-
+  
   <nav class="menu">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="cardapio.html" class="active">Cardápio</a></li>
       <li><a href="sobre.html">Sobre Nós</a></li>
     </ul>
-  </nav>
+  </nav>  
 
   <section class="conteudo-cardapio">
     <div class="container">
@@ -85,6 +53,30 @@
         </div>
       </div>
 
+      <div class="box-lanche">
+        <div class="descricao-lanche">
+          <span class="tag">HOT CLÁSSICO</span>
+          <h3>Pão, carne, queijo prato e maionese especial</h3>
+          <p>O hambúrguer clássico feito com ingredientes simples e saborosos, direto da nossa parrilla.</p>
+        </div>
+        <div class="preco-lanche">
+          <img src="assets/img/cardapio/hot-classico.jpg" alt="Hot Clássico">
+          R$32,99
+        </div>
+      </div>
+      
+      <div class="box-lanche">
+        <div class="descricao-lanche">
+          <span class="tag">APOLO BURGUER</span>
+          <h3>180g de carne, cheddar derretido, cebola crispy e molho da casa</h3>
+          <p>Inspirado no deus do sol, esse lanche traz calor e sabor divino em cada mordida.</p>
+        </div>
+        <div class="preco-lanche">
+          <img src="assets/img/cardapio/lanche-apolo.jpg" alt="Apolo Burguer">
+          R$44,90
+        </div>
+      </div>      
+      
     </div>
   </section>
 
