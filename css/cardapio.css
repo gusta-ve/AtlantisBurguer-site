@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #081b2c;
   color: #fff;
 }
@@ -17,50 +17,57 @@ body {
 
 .banner {
   height: 300px;
-  background-image: url('../assets/img/home/lanche head.jpg');
-  background-size: cover;
-  background-position: center;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  z-index: 1;
 }
 
-.banner::after {
-  content: "";
+.banner-bg {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* mesma opacidade da home */
+  background-image: url("../assets/img/home/lanche head.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
   z-index: -1;
 }
 
 .logo-nav {
-  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
 }
 
 .logo-central {
-  font-size: 2.8rem;
-  font-weight: bold;
+  font-size: 4rem;
+  font-weight: 400;
+  letter-spacing: 20 px;
+  margin-bottom: 0.5rem;
   color: #fff;
-  letter-spacing: 2px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-central > span:first-child {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 20px;
 }
 
 .logo-central span {
-  color: #ffc300;
+  font-size: 1.5rem;
+  color: white;
 }
 
 .intro-box {
   background-color: rgba(255, 255, 255, 0.08);
   padding: 2rem;
   border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   margin-bottom: 3rem;
   text-align: center;
 }
@@ -83,7 +90,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(255,255,255,0.05);
+  background-color: rgba(255, 255, 255, 0.05);
   padding: 1rem 1.5rem;
   border-radius: 10px;
   margin-bottom: 2rem;
@@ -150,48 +157,48 @@ body {
 }
 
 .menu {
-    background: transparent;
-    position: relative;
-    text-align: center;
-    padding: 30px 0;
-  }
-  
-  .menu ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .menu ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    position: relative;
-    padding-bottom: 5px;
-  }
-  
-  .menu ul li a:hover,
-  .menu ul li a.active {
-    color: #ffc300;
-  }
-  
-  .menu ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 2px;
-    width: 0%;
-    background-color: #ffc300;
-    transition: width 0.3s ease;
-  }
-  
-  .menu ul li a:hover::after,
-  .menu ul li a.active::after {
-    width: 100%;
-  }  
+  background: transparent;
+  position: relative;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.menu ul li a:hover,
+.menu ul li a.active {
+  color: #ffc300;
+}
+
+.menu ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #ffc300;
+  transition: width 0.3s ease;
+}
+
+.menu ul li a:hover::after,
+.menu ul li a.active::after {
+  width: 100%;
+}
