@@ -1,0 +1,156 @@
+.banner {
+    height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .banner-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url("../assets/img/home/lanche head.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+  }
+  
+  .logo-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .logo-central {
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 20px;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo-central > span:first-child {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 20px;
+  }
+  
+  .logo-central span {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  /*Footer*/
+
+  .rodape {
+    background: #0b2438;
+    padding: 3rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .rodape .rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    gap: 3rem;
+  }
+  
+  .mapa {
+    flex: 1;
+  }
+  
+  .info-endereco {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 30px;
+  }
+  
+  .rodape h3 {
+    margin-bottom: 0.5rem;
+    color: #ffc300;
+    font-size: 1.1rem;
+  }
+  
+  .rodape p {
+    margin: 0.2rem 0;
+    font-size: 0.95rem;
+  }
+  
+  .redes-sociais {
+    margin-top: 2rem;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .redes-sociais img {
+    width: 28px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s;
+  }
+  
+  .redes-sociais img:hover {
+    transform: scale(1.1);
+  }
+
+
+  /*Navegação*/
+  .menu {
+    background: transparent;
+    position: relative;
+    text-align: center;
+    padding: 30px 0;
+  }
+  
+  .menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+  }
+  
+  .menu ul li a:hover,
+  .menu ul li a.active {
+    color: #ffc300;
+  }
+  
+  .menu ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #ffc300;
+    transition: width 0.3s ease;
+  }
+  
+  .menu ul li a:hover::after,
+  .menu ul li a.active::after {
+    width: 100%;
+  }
+  

@@ -20,13 +20,13 @@ function moverSlide(direcao) {
   atualizarSlides();
 }
 
-function iniciarAutoplay() {
-  intervaloCarrossel = setInterval(() => moverSlide(1), 4000);
-}
+// function iniciarAutoplay() {
+//   intervaloCarrossel = setInterval(() => moverSlide(1), 4000);
+// }
 
-function pararAutoplay() {
-  clearInterval(intervaloCarrossel);
-}
+// function pararAutoplay() {
+//   clearInterval(intervaloCarrossel);
+// }
 
 document.addEventListener('DOMContentLoaded', () => {
   atualizarSlides();
