@@ -1,51 +1,47 @@
-let currentSlide = 0;
-let intervaloCarrossel;
-const imagens = document.querySelectorAll('#carrosselWrapper img');
-const carrosselWrapper = document.getElementById('carrosselWrapper');
+(function () {
+  "use strict";
 
-function atualizarSlides() {
-  imagens.forEach((img, index) => {
-    img.classList.remove('img-central');
-    if (index === currentSlide) {
-      img.classList.add('img-central');
-    }
-  });
+  const carousel = document.querySelector('.carrossel');
+  const slider = document.getElementById('carrosselWrapper');
+  const items = slider.querySelectorAll('img');
 
-  const offset = currentSlide * (imagens[0].offsetWidth + 16); // 16 = gap
-  carrosselWrapper.style.transform = `translateX(-${offset}px)`;
-}
+  let currIndex = 0;
 
-function moverSlide(direcao) {
-  currentSlide = (currentSlide + direcao + imagens.length) % imagens.length;
-  atualizarSlides();
-}
+  window.moverSlide = function (step) {
+    move(currIndex + step);
+  };
 
-// function iniciarAutoplay() {
-//   intervaloCarrossel = setInterval(() => moverSlide(1), 4000);
-// }
+  function init() {
+    move(Math.floor(items.length / 2));
+    window.addEventListener('resize', () => move(currIndex));
+  }
 
-// function pararAutoplay() {
-//   clearInterval(intervaloCarrossel);
-// }
+  function move(index) {
+    if (index < 0) index = items.length - 1;
+    if (index >= items.length) index = 0;
+    currIndex = index;
 
-document.addEventListener('DOMContentLoaded', () => {
-  atualizarSlides();
-  iniciarAutoplay();
+    const itemWidth = items[0].offsetWidth + 32;
+    const offset = index * itemWidth - (carousel.offsetWidth / 2 - itemWidth / 2);
 
-  carrosselWrapper.addEventListener('mouseenter', pararAutoplay);
-  carrosselWrapper.addEventListener('mouseleave', iniciarAutoplay);
+    slider.scrollTo({
+      left: offset,
+      behavior: 'smooth'
+    });
 
-  let startX = 0;
+    items.forEach((item, i) => {
+      item.classList.remove('img-central');
+      item.style.transform = 'scale(0.9)';
+      item.style.opacity = '0.5';
+      item.style.zIndex = 0;
+    });
 
-  carrosselWrapper.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-  });
+    const active = items[index];
+    active.classList.add('img-central');
+    active.style.transform = 'scale(1.2)';
+    active.style.opacity = '1';
+    active.style.zIndex = 1;
+  }
 
-  carrosselWrapper.addEventListener('touchend', (e) => {
-    const endX = e.changedTouches[0].clientX;
-    const diff = startX - endX;
-
-    if (diff > 50) moverSlide(1);
-    else if (diff < -50) moverSlide(-1);
-  });
-});
+  init();
+})();

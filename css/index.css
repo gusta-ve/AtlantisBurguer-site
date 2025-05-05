@@ -1,6 +1,6 @@
 
 
-.carrossel {
+/* .carrossel {
   background: url("../assets/img/home/fundo01.jpg") center center
     no-repeat;
     background-size: cover;
@@ -9,47 +9,47 @@
     position: relative;
     background-position: center bottom;
     min-height: 400px;
+} */
+
+.carrossel {
+  background: 
+    url("../assets/img/home/fundo01.jpg") center center no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 0 0 2rem;
+  min-height: 400px;
+  background-position: center bottom;
 }
 
-.carrossel::before {
+/* .carrossel::before {
   content: "";
   position: absolute;
   inset: 0;
-  /* background: rgba(8, 27, 44, 0.8); */
+  /* background: rgba(8, 27, 44, 0.8); 
   backdrop-filter: brightness(0.9);
   z-index: 0;
-}
-
-.carrossel-wrapper,
-.carrossel-controles,
-.btn-central {
-  position: relative;
-  z-index: 1;
-}
+} */
 
 .carrossel-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow-x: hidden;
+  scroll-behavior: auto;
   gap: 1rem;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.carrossel-wrapper::-webkit-scrollbar {
-  display: none;
+  padding: 1rem;
+  scroll-snap-type: x mandatory;
+  overflow-y: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .carrossel-wrapper img {
+  flex: 0 0 auto;
   width: 180px;
-  height: auto;
-  border-radius: 8px;
+  height: 180px;
+  
+  border-radius: 12px;
+  scroll-snap-align: center;
   transition: transform 0.3s, opacity 0.3s;
-  opacity: 0.5;
-  cursor: pointer;
 }
 
 .carrossel-wrapper img.img-central {
@@ -57,30 +57,30 @@
   opacity: 1;
 }
 
-.carrossel-controles {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
 
-.carrossel-controles button {
-  background-color: #ffc300;
-  color: #081b2c;
+.seta-carrossel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
   border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1.2rem;
-  border-radius: 50px;
+  color: #fff;
   cursor: pointer;
-  transition: background 0.3s ease;
+  z-index: 2;
+  padding: 0 10px;
 }
 
-.carrossel-controles button:hover {
-  background-color: #ffda5f;
+.seta-carrossel.esquerda {
+  left: -100px;
+}
+
+.seta-carrossel.direita {
+  right: -100px;
 }
 
 .pedido {
-  padding: 3rem 0;
+  padding: 1rem 0;
   text-align: center;
   display: flex; /* Torna a section um container flex */
   justify-content: center; /* Alinha o conteúdo (botão) horizontalmente no centro */
