@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-image:url("/img/home/lanche head.jpg") ;
+    color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+}
+h1 {
+    text-align: center;
+    padding: 20px;
+}
