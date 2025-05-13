@@ -3,14 +3,27 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background: #0b2438;
+}
 header {
     background-image:url("/img/home/lanche head.jpg") ;
     color: white;
     background-repeat: no-repeat;
     background-size: cover;
     height: 200px;
+    opacity: 0.3;
 }
 h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 20px;
     text-align: center;
     padding: 20px;
+
+}
+
+.bg {
+  display: block;
 }
