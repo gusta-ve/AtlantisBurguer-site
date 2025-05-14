@@ -1,0 +1,14 @@
+.btn-central {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.btn-acao {
+    background: #ffd900c7;
+    margin: 0;
+    padding: 10px 30px;
+    border-radius: 15px;
+    color: white;
+}
