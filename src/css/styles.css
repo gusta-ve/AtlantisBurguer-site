@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat';
 }
 
 body {
@@ -25,52 +26,41 @@ html, body {
 
 /* Header */
 header {
-    background-image: url("/src/img/home/header.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    height: 200px;
-    display: flex;
-    justify-content: center;  /* centraliza horizontalmente */
-    align-items: center;      /* centraliza verticalmente */
-    text-align: center;
-    overflow: hidden;
-    opacity: 0.3;
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
-
-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3;
-    z-index: 0;
+.at {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  letter-spacing: 20px;
 }
-
-/* conteúdo sobre o fundo */
-.header {
-    position: relative;
-    z-index: 1;
-}
-
-.header h1 {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    font-size: 2rem;
-    letter-spacing: 10px;
-    font-size: 2.5rem;
-}
-
 .burguer {
-    font-size: 2rem;
-    letter-spacing: 6px;
-    margin-top: 5px;
+  letter-spacing: 7px;
+  font-size: 1.5rem;
 }
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/src/img/home/header.jpg') center/cover no-repeat;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.header {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
 
 /* Navegação */
 .menu {
@@ -107,8 +97,39 @@ header::before {
   .footer {
     background: #0b2438;
     padding: 3rem 1rem;
-    text-align: center;
+    /* text-align: center; */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
   }
+  
+.mapa {
+  grid-column: 1;
+}
+
+.info {
+  color: #ffd700;
+  grid-column: 2;
+}
+
+.redes {
+  grid-column: 3;
+}
+.redes img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain; /* garante que a imagem mantenha proporção */
+  filter: brightness(0) invert(1); /* deixa branco se for SVG escuro */
+  transition: transform 0.2s;
+}
+
+.redes img:hover {
+  transform: scale(1.1);
+}
+
+.redes a {
+  text-decoration: none;
+}
