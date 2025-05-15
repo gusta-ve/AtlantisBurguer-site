@@ -3,12 +3,79 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    padding: 20px;
 }
 
 .btn-acao {
-    background: #ffd900c7;
+    background: #ffd70f;
     margin: 0;
     padding: 10px 30px;
     border-radius: 15px;
     color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+/* Carrossel */
+.carrossel {
+  width: 100%;
+  height: 400px;
+  background: url('../assets/img/home/fundo-ornamento.jpg') center center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  overflow: hidden;
+}
+
+.imagens-lado {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; 
+}
+
+.imagem {
+  width: 250px;
+  height: 25    0px;
+  overflow: hidden;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+
+}
+
+.centro-fixo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.seta-carrossel {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s;
+}
+
+.seta-carrossel:hover {
+  color: #FFD700;
+}
+
+#tridente {
+  width: 150px;
+  height: 100px;
 }
