@@ -4,7 +4,7 @@ const imagens = [
   "src/img/home/segurando lanche.jpg",
   "src/img/home/lanche cheddar.jpg",
   "src/img/home/finaldelas.jpg",
-  "src/img/home/lanche cheddar.jpg",
+  "src/img/home/reserve.png",
 ];
 
 let indiceAtual = 0;
