@@ -7,7 +7,7 @@
 }
 
 .btn-acao {
-    background: #ffd70f;
+    background: #e6af36;
     margin: 0;
     padding: 10px 30px;
     border-radius: 15px;
@@ -33,6 +33,7 @@
   background-image: url(/src/img/home/fundo.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: bottom;
   opacity: 0.5; /* ajuste aqui a opacidade desejada */
   z-index: -1;
 }
@@ -57,7 +58,7 @@
 
 .imagem {
   width: 250px;
-  height: 25    0px;
+  height: 250px;
   overflow: hidden;
   border-radius: 15px;
   display: flex;
@@ -100,4 +101,38 @@
 #tridente {
   width: 150px;
   height: 100px;
+}
+
+@media (max-width: 768px) {
+
+  .carrossel {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+
+  .imagens-lado {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .imagem {
+    width: 80%;
+    height: auto;
+  }
+
+  .btn-acao {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .seta-carrossel {
+    font-size: 2rem;
+  }
+
+  #tridente {
+    width: 100px;
+    height: auto;
+  }
 }

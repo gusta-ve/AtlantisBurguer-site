@@ -39,12 +39,12 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  letter-spacing: 20px;
-  font-size: 40 px;
+  letter-spacing: 27px;
+  font-size: 50px;
 }
 .burguer {
-  letter-spacing: 7px;
-  font-size: 1.5rem;
+  letter-spacing: 12px;
+  font-size: 2rem;
 }
 
 .bg {
@@ -100,14 +100,14 @@ header {
       left: 0;
       height: 2px;
       width: 0;
-      background-color: #ffd700;
+      background-color: #a69137;
       transition: width 0.3s ease;
     }
 
     .menu li a:hover,
     .menu li a.active {
-      color: #ffd700;
-      text-decoration-color: #ffd700;
+      color: #a69137;
+      text-decoration-color: #a69137;
     }
 
     .menu li a:hover::after,
@@ -164,7 +164,7 @@ header {
 }
 
 .info a:hover {
-  color: #f9a825;
+  color: #a69137;
 }
 
 .redes {
@@ -191,3 +191,67 @@ header {
   transform: scale(1.1);
 }
 
+
+@media (max-width: 768px) {
+
+  header {
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .at {
+    font-size: 2rem;
+    letter-spacing: 10px;
+  }
+
+  .burguer {
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .menu {
+    padding: 10px 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer {
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer > div {
+    min-width: 100%;
+  }
+
+  .redes {
+    justify-content: center;
+  }
+
+  .info-endereco {
+    align-items: center;
+  }
+
+  .mapa iframe {
+    height: 200px;
+  }
+
+  body {
+    min-width: 100%;
+    overflow-x: hidden;
+  }
+
+}
