@@ -1,0 +1,138 @@
+.btn-central {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.btn-acao {
+    background: #e6af36;
+    margin: 0;
+    padding: 10px 30px;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.fundo {
+  position: relative;
+  padding-top: 20px;
+  margin: 30px 0;
+  z-index: 1;
+}
+
+.fundo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/src/img/home/fundo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  opacity: 0.5; /* ajuste aqui a opacidade desejada */
+  z-index: -1;
+}
+
+
+/* Carrossel */
+.carrossel {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  overflow: hidden;
+}
+
+.imagens-lado {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; 
+}
+
+.imagem {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+
+}
+
+.centro-fixo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.seta-carrossel {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: color 0.3s;
+}
+
+.seta-carrossel:hover {
+  color: #FFD700;
+}
+
+#tridente {
+  width: 150px;
+  height: 100px;
+}
+
+@media (max-width: 768px) {
+
+  .carrossel {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+
+  .imagens-lado {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .imagem {
+    width: 80%;
+    height: auto;
+  }
+
+  .btn-acao {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .seta-carrossel {
+    font-size: 2rem;
+  }
+
+  #tridente {
+    width: 100px;
+    height: auto;
+  }
+}
