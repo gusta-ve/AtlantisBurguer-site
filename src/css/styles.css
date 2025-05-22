@@ -10,6 +10,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: 'Montserrat';
+    min-width: 100vw;
+    overflow-x: hidden    ;
 
 }
 
@@ -115,19 +117,19 @@ header {
 
   /*Footer*/
 
-  .footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: #0b2438;
-    color: #fff;
-    padding: 30px;
-    flex-wrap: wrap;
-    gap: 60px;
-  }
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #0b2438;
+  color: #fff;
+  padding: 30px;
+  flex-wrap: wrap;
+  gap: auto;
+}
 
 .footer > div {
     flex: 1;
-    min-width: 250px;
+    min-width: 100%;
 }
 
 .footer-container {
