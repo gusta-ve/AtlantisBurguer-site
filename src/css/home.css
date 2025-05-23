@@ -1,19 +1,28 @@
 .btn-central {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 50px 20px;
+  gap: 20px;
 }
 
 .btn-acao {
-    background: #e6af36;
-    margin: 0;
-    padding: 10px 30px;
-    border-radius: 15px;
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
+  background: #e6af36;
+  margin: 0;
+  padding: 10px 30px;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.ou-texto {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 15px;
+  align-self: center;
 }
 
 .fundo {
@@ -38,7 +47,6 @@
   z-index: -1;
 }
 
-
 /* Carrossel */
 .carrossel {
   width: 100%;
@@ -53,7 +61,7 @@
 .imagens-lado {
   display: flex;
   flex-direction: row;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .imagem {
@@ -73,7 +81,6 @@
   object-fit: cover;
   border-radius: 12px;
   transition: all 0.5s ease;
-
 }
 
 .centro-fixo {
@@ -95,7 +102,7 @@
 }
 
 .seta-carrossel:hover {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 #tridente {
@@ -104,7 +111,6 @@
 }
 
 @media (max-width: 768px) {
-
   .carrossel {
     flex-direction: column;
     height: auto;
