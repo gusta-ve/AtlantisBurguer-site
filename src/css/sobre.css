@@ -15,7 +15,13 @@
 }
 
 .sobre-destaque {
-  margin-bottom: 2rem;
+  width: 100vw; /* largura total da viewport */
+  position: relative; /* importante para ajustes futuros */
+  padding: 2rem 1rem;
+  background-image: url("../img/home/fundo.png");
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
 }
 
 .tridente {
@@ -43,6 +49,7 @@
 }
 
 .paragrafo-bloco p {
+  color: white;
   max-width: 900px;
   font-size: 1.1rem;
   line-height: 1.8;
