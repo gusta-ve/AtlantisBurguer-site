@@ -7,7 +7,7 @@
 
 .sobre-nos {
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 0rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,10 +18,10 @@
   width: 100vw; /* largura total da viewport */
   position: relative; /* importante para ajustes futuros */
   padding: 2rem 1rem;
-  background-image: url("../img/home/fundo.png");
-  background-size: contain;
-  background-position: center bottom;
+  background-image: url(/src/img/home/fundo.png);
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .tridente {
