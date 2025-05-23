@@ -1,12 +1,37 @@
-.btn-central {
+.botoes {
+  display: flex;
+  justify-content: center; /* Centraliza os botões */
+  gap: 20px; /* Espaço entre os botões */
+  flex-wrap: wrap; /* Garante que eles se ajustem em telas pequenas */
+  margin-top: 20px;
+    padding: 20px;
+}
+
+.pedido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.btn-acao {
+    background: #e6af36;
+    margin: 0;
+    padding: 10px 30px;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.reserva {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     padding: 20px;
 }
-
-.btn-acao {
+.btn-rsv {
     background: #e6af36;
     margin: 0;
     padding: 10px 30px;
