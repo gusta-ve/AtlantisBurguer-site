@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+
+.destaque-amarelo {
+  color: #ffc300;
+  font-weight: 600;
+}
+
+.sobre-nos {
+  width: 100%;
+  padding: 0rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sobre-destaque {
+  width: 100vw; /* largura total da viewport */
+  position: relative; /* importante para ajustes futuros */
+  padding: 2rem 1rem;
+  background-image: url(/src/img/home/fundo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.tridente {
+  width: 100px;
+  max-width: 80%;
+  opacity: 0.9;
+}
+.estrelas {
+  width: 150px;
+  max-width: 80%;
+  opacity: 0.9;
+}
+
+.sobre-titulo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.sobre-conteudo {
+  padding: 0 1rem;
+}
+
+.paragrafo-bloco p {
+  color: white;
+  max-width: 900px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.destaque-amarelo {
+  color: #ffc300;
+  font-weight: 600;
+}
