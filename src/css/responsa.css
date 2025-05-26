@@ -1,0 +1,159 @@
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .at {
+    font-size: 2rem;
+    letter-spacing: 10px;
+  }
+
+  .burguer {
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .menu {
+    padding: 10px 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer {
+    padding: 20px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer > div {
+    min-width: 100%;
+  }
+
+  .redes {
+    justify-content: center;
+  }
+
+  .info-endereco {
+    align-items: center;
+  }
+
+  .mapa iframe {
+    height: 180px;
+  }
+
+  body {
+    min-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .carrossel {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .imagens-lado {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagem {
+    width: 90%;
+  }
+
+  .btn-acao,
+  .btn-rsv {
+    font-size: 0.95rem;
+    padding: 8px 20px;
+  }
+
+  .seta-carrossel {
+    font-size: 1.8rem;
+  }
+
+  #tridente {
+    display: none; /* esconde o logo central no mobile/tablet */
+    width: 80px;
+  }
+
+  /* === CARROSSEL MOBILE para até 768px === */
+  #lado-esquerdo,
+  #lado-direito {
+    display: none !important;
+  }
+
+  #carrossel-mobile {
+    display: block !important;
+    width: 90%;
+    margin: 0 auto 20px;
+    overflow: hidden;
+  }
+
+  #carrossel-mobile-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  #carrossel-mobile .imagem {
+    flex: 0 0 100%;
+    padding: 0 10px;
+    scroll-snap-align: center;
+  }
+
+  #carrossel-mobile .imagem img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+  }
+
+  .centro-fixo {
+    width: 90%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .seta-carrossel {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #e6af36;
+  }
+}
+
+/* -------- Ajustes finos para celulares pequenos -------- */
+@media (max-width: 480px) {
+  .at {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+  }
+
+  .burguer {
+    font-size: 1rem;
+  }
+
+  .menu li a {
+    font-size: 1rem;
+  }
+
+  .mapa iframe {
+    height: 150px;
+  }
+
+  .redes img {
+    width: 24px;
+    height: 24px;
+  }
+}
