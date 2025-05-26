@@ -87,6 +87,26 @@ header {
   width: 100%;
 }
 
+/*Imagens do cardápio*/
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main > div {
+  width: 100%;
+}
+
+.cs-chosen-image {
+  display: block;
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+}
+
 /*Footer*/
 
 .footer {
