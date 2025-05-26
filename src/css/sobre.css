@@ -15,28 +15,41 @@
 }
 
 .sobre-destaque {
-  width: 100vw; /* largura total da viewport */
-  position: relative; /* importante para ajustes futuros */
-  padding: 2rem 1rem;
-  background-image: url(/src/img/home/fundo.png);
+  position: relative;
+  width: 100vw;
+  padding: 1rem;
+  z-index: 1;
+  overflow: hidden; /* evita que o ::before ultrapasse os limites */
+}
+
+.sobre-destaque::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/src/img/sobre/fundo_sobre.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
+  opacity: 0.5;
+  z-index: -1;
 }
-
+.slogan{
+  padding: 2rem 0;
+}
 .tridente {
-  width: 100px;
-  max-width: 80%;
-  opacity: 0.9;
+  width: 200px;
+  max-width: 100%;
 }
 .estrelas {
-  width: 150px;
+  width: 180px;
   max-width: 80%;
-  opacity: 0.9;
 }
 
 .sobre-titulo {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   margin: 1rem 0;
   text-transform: uppercase;
@@ -48,10 +61,11 @@
   padding: 0 1rem;
 }
 
-.paragrafo-bloco p {
+.paragrafo-bloco {
+  padding: 2rem 0;
   color: white;
   max-width: 900px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
