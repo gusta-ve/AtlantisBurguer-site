@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
@@ -11,11 +12,13 @@
       href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="./src/css/styles.css" />
     <link rel="stylesheet" href="./src/css/cardapio.css" />
 
-    <title>Cardápio</title>
+    <title>Cardápio | Atlantis Burguer</title>
   </head>
+
   <body>
     <header>
       <div class="bg"></div>
@@ -24,66 +27,69 @@
       </div>
     </header>
 
+    <nav class="menu">
+      <ul>
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </nav>
+
     <main>
-      <div>
-        <nav class="menu">
-          <ul>
-            <li><a href="home.html" class="active">Home</a></li>
-            <li><a href="cardapio.html">Cardápio</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div>
-        <img
-          class="cs-chosen-image"
-          src="https://yata-apix-5c9403b8-3fc8-42eb-a5b1-d4586134dfb2.s3-object.locaweb.com.br/ee4706234d0a47d1b8ba08bd463f2108.png"
-          title="1.png"
-          alt="1.png"
-        />
-      </div>
-      <div>
-        <img
-          class="cs-chosen-image"
-          src="https://yata-apix-5c9403b8-3fc8-42eb-a5b1-d4586134dfb2.s3-object.locaweb.com.br/39078591759f4248aa745c2fb0954d8b.png"
-          title="2.png"
-          alt="2.png"
-        />
-      </div>
-      <div>
-        <img
-          class="cs-chosen-image"
-          src="https://yata-apix-5c9403b8-3fc8-42eb-a5b1-d4586134dfb2.s3-object.locaweb.com.br/6697c058f2384409be23de32a17ad9e5.png"
-          title="CDP_ATL_24_1080X1560.pdf (6).png"
-          alt="CDP_ATL_24_1080X1560.pdf (6).png"
-        />
-      </div>
-      <div>
-        <img
-          class="cs-chosen-image"
-          src="https://yata-apix-5c9403b8-3fc8-42eb-a5b1-d4586134dfb2.s3-object.locaweb.com.br/0bc99bec9a874e31a1f8a334c6ead399.png"
-          title="CDP_ATL_24_1080X1560.pdf (5).png"
-          alt="CDP_ATL_24_1080X1560.pdf (5).png"
-        />
-      </div>
-      <div>
-        <img
-          class="cs-chosen-image"
-          src="https://yata-apix-5c9403b8-3fc8-42eb-a5b1-d4586134dfb2.s3-object.locaweb.com.br/beeb0e6dfe894eb88ec601859072a1ec.png"
-          title="CDP_ATL_24_1080X1560.pdf (4).png"
-          alt="CDP_ATL_24_1080X1560.pdf (4).png"
-        />
-      </div>
-      <div>
-        <img
-          class="cs-chosen-image"
-          src="https://yata-apix-5c9403b8-3fc8-42eb-a5b1-d4586134dfb2.s3-object.locaweb.com.br/52f25b2ac8be4a1d8f6dffbbac762fd6.png"
-          title="CDP_ATL_24_1080X1560.pdf.png"
-          alt="CDP_ATL_24_1080X1560.pdf.png"
-        />
-      </div>
+      <!-- Imagens do Cardápio -->
+      <section class="cardapio-galeria">
+        <article>
+          <img
+            class="cs-chosen-image"
+            src="https://yata-apix-5c9403b8-3fc8-42eb-a5b1-d4586134dfb2.s3-object.locaweb.com.br/ee4706234d0a47d1b8ba08bd463f2108.png"
+            alt="Imagem 1 do cardápio"
+            title="1.png"
+          />
+        </article>
+        <article>
+          <img
+            class="cs-chosen-image"
+            src="https://yata-apix-5c9403b8-3fc8-42eb-a5b1-d4586134dfb2.s3-object.locaweb.com.br/39078591759f4248aa745c2fb0954d8b.png"
+            alt="Imagem 2 do cardápio"
+            title="2.png"
+          />
+        </article>
+        <article>
+          <img
+            class="cs-chosen-image"
+            src="https://yata-apix-5c9403b8-3fc8-42eb-a5b1-d4586134dfb2.s3-object.locaweb.com.br/6697c058f2384409be23de32a17ad9e5.png"
+            alt="Imagem 3 do cardápio"
+            title="3.png"
+          />
+        </article>
+        <article>
+          <img
+            class="cs-chosen-image"
+            src="https://yata-apix-5c9403b8-3fc8-42eb-a5b1-d4586134dfb2.s3-object.locaweb.com.br/0bc99bec9a874e31a1f8a334c6ead399.png"
+            alt="Imagem 4 do cardápio"
+            title="4.png"
+          />
+        </article>
+        <article>
+          <img
+            class="cs-chosen-image"
+            src="https://yata-apix-5c9403b8-3fc8-42eb-a5b1-d4586134dfb2.s3-object.locaweb.com.br/beeb0e6dfe894eb88ec601859072a1ec.png"
+            alt="Imagem 5 do cardápio"
+            title="5.png"
+          />
+        </article>
+        <article>
+          <img
+            class="cs-chosen-image"
+            src="https://yata-apix-5c9403b8-3fc8-42eb-a5b1-d4586134dfb2.s3-object.locaweb.com.br/52f25b2ac8be4a1d8f6dffbbac762fd6.png"
+            alt="Imagem 6 do cardápio"
+            title="6.png"
+          />
+        </article>
+      </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
       <div class="footer-container">
         <!-- Mapa -->
