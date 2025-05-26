@@ -1,3 +1,8 @@
+.menu{
+  padding: 20px 30px 0 30px;
+  justify-content: center;
+
+}
 .botoes {
   display: flex;
   justify-content: center; /* Centraliza os botões */

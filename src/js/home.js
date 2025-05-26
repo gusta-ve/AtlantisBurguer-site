@@ -10,13 +10,27 @@ let indice = 0;
 
 const ladoEsquerdo = document.getElementById("lado-esquerdo");
 const ladoDireito = document.getElementById("lado-direito");
-
 const carrosselMobile = document.getElementById("carrossel-mobile");
 const carrosselMobileInner = document.getElementById("carrossel-mobile-inner");
 
-// Monta as imagens do carrossel mobile (uma única linha)
+// Cria um elemento .imagem com <img>
+function criarDivImagem(src, alt) {
+  const div = document.createElement("div");
+  div.className = "imagem";
+
+  const img = document.createElement("img");
+  img.src = src;
+  img.alt = alt;
+  img.style.width = "100%";
+  img.style.borderRadius = "15px";
+
+  div.appendChild(img);
+  return div;
+}
+
+// Carrossel Mobile
 function montarCarrosselMobile() {
-  carrosselMobileInner.innerHTML = ""; // limpa
+  carrosselMobileInner.innerHTML = "";
 
   imagensCarrossel.forEach((src, i) => {
     const div = document.createElement("div");
@@ -36,48 +50,48 @@ function montarCarrosselMobile() {
   });
 }
 
-// Atualiza imagens para desktop
+// Carrossel Desktop
 function atualizarLadosDesktop() {
-  ladoEsquerdo.querySelectorAll(".imagem img").forEach((img, i) => {
-    img.src = imagensCarrossel[(indice + i) % imagensCarrossel.length];
-  });
+  ladoEsquerdo.innerHTML = "";
+  ladoDireito.innerHTML = "";
 
-  ladoDireito.querySelectorAll(".imagem img").forEach((img, i) => {
-    img.src = imagensCarrossel[(indice + i + 3) % imagensCarrossel.length];
-  });
+  for (let i = 0; i < 3; i++) {
+    const srcEsquerdo = imagensCarrossel[(indice + i) % imagensCarrossel.length];
+    const srcDireito = imagensCarrossel[(indice + i + 3) % imagensCarrossel.length];
+
+    ladoEsquerdo.appendChild(criarDivImagem(srcEsquerdo, `Imagem ${i + 1}`));
+    ladoDireito.appendChild(criarDivImagem(srcDireito, `Imagem ${i + 4}`));
+  }
 }
 
-// Atualiza carrossel mobile movendo a linha para o índice certo
+// Atualiza carrossel mobile (movimenta)
 function atualizarCarrosselMobile() {
   carrosselMobileInner.style.transform = `translateX(${-indice * 100}%)`;
 }
 
-// Função geral para atualizar dependendo do tamanho da tela
+// Verifica tamanho da tela e aplica o modo correto
 function atualizarCarrossel() {
+  const tridente = document.getElementById("tridente");
+
   if (window.innerWidth <= 480) {
-    // Ativa carrossel mobile
     ladoEsquerdo.style.display = "none";
     ladoDireito.style.display = "none";
     carrosselMobile.style.display = "block";
+    if (tridente) tridente.style.display = "none";
 
     montarCarrosselMobile();
     atualizarCarrosselMobile();
-
-    const tridente = document.getElementById("tridente");
-    if (tridente) tridente.style.display = "none";
   } else {
-    // Ativa carrossel desktop
     ladoEsquerdo.style.display = "flex";
     ladoDireito.style.display = "flex";
     carrosselMobile.style.display = "none";
-
-    const tridente = document.getElementById("tridente");
     if (tridente) tridente.style.display = "block";
 
     atualizarLadosDesktop();
   }
 }
 
+// Navega pelas imagens
 function mudarImagens(direcao) {
   indice = (indice + direcao + imagensCarrossel.length) % imagensCarrossel.length;
 
@@ -88,6 +102,6 @@ function mudarImagens(direcao) {
   }
 }
 
-// Atualizações em resize e load
+// Inicialização
 window.addEventListener("resize", atualizarCarrossel);
 window.addEventListener("load", atualizarCarrossel);
